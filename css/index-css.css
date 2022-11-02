@@ -1,0 +1,462 @@
+/* === Álltalános szabály === */
+
+* {
+    box-sizing: border-box;
+}
+
+/* === Header === */
+
+header {
+    background: url(../képek/wedding-landing-cover.jpg) no-repeat center;
+    background-position: 70%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: table;
+}
+
+  /* pozíció */
+
+.headerr {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+  /* kiemelés színe */
+
+.box {
+    background-color: hsla(100,0%,0%,.6);
+}
+
+/* kiemelés középre, nagyobb képernyőkön */
+
+@media (min-width: 768px) {
+
+    .box {
+        display: inline-block;
+        border-radius: 10px;
+        width: 50%;
+    }    
+}
+
+  /* betű szinek */
+
+header h1 {
+    color: #d2ba87;
+}
+
+header h2, header h3 {
+    color: hsla(0,0%,100%,.9);
+}
+
+  /* betű típus*/
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+header h2, header h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+  /* egyéb formázás */
+
+header h1 {
+    font-size: 3rem;
+    display: inline-block;
+    padding-top: 1rem;
+
+}
+
+header h2 {
+    font-size: 1.4rem;
+    padding: 1rem 0 .5rem;
+}
+
+header h3 {
+    font-size: 1.2em;  
+    padding: 1.3rem 0;
+}
+
+header h2, header h3 {
+    letter-spacing: 0.1em;
+}
+
+  /* képernyő igazítás */
+
+@media (min-width: 768px) {
+    header h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+    
+    header h1 {
+        font-size: 6.5rem;
+        padding: 1.01rem 0;
+        padding-top: 2.5rem;
+    }
+
+    header h3 {
+        padding: 2rem 0;
+    }
+}
+
+  /*  elválasztó vonalak  */
+
+.vonal {
+    display: inline-block;
+    content: "";
+    background-color: #fff;
+    height: 1px;
+    width: 12rem;
+    vertical-align: middle;
+    margin: 0 .5rem;
+}
+
+header h3::before, header h3::after {
+    display: inline-block;
+    content: "";
+    background-color: #fff;
+    height: 1px;
+    width: 1.5rem;
+    vertical-align: middle;
+    margin: 0 .5rem;    
+}
+
+/* === helyszínek === */
+
+  /* háttér */
+
+.locations {
+    background: url(../képek/wedding-landing-background.png);
+    text-align: center;    
+}
+
+  /* betű szín*/
+
+.locations h1, .locations h2 {
+    color: rgba(0, 0, 0, .7);
+}
+
+  /* betű típus */
+
+.locations h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.locations h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.locations p {
+    font-family: 'Mulish', sans-serif;
+}
+
+  /* egyéb formázás */
+
+.locations h1 {
+    font-size: 3rem;
+    padding: 3rem 0;
+}
+
+.loc {
+    padding-bottom: 1.2rem;
+}
+
+.locations h2 {
+    font-size: 1.5rem;  
+    padding-bottom: 1.7rem;
+    font-weight: 600;
+}
+
+img {
+    width: 125px;
+    padding-bottom: 1.1rem;
+}
+
+.locations p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding: 0.9rem 0;
+}
+
+  /* elválasztó */
+
+.elvalaszto {
+    display: inline-block;
+    content: "";
+    background-color: rgba(0, 0, 0, .7);
+    height: 3px;
+    width: 9rem;
+    vertical-align: middle;
+    margin: 0 .5rem;
+}
+
+  /* képernyő igazítás */
+
+@media (min-width: 768px) {
+
+    .loc-pozicio {
+        display: table;
+    }
+
+    .loc {
+        display: table-cell;
+        padding: 1rem;
+        width: 100vw;
+    }
+
+    .elvalaszto {
+        display: inline;
+    }
+}
+
+/* === Program === */
+
+  /* háttér- és betű szín*/
+
+.program {
+    background-color: rgba(93, 93, 93);
+    color: #d2ba87;
+}
+
+  /* betű típus*/
+
+.program h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+blockquote, .program p {
+    font-family: 'Mulish', sans-serif;
+}
+
+  /* egyéb formázás */
+
+.program h1 {
+    font-size: 3rem;
+    padding: 2.5rem 0;    
+    text-align: center;
+}
+
+
+blockquote, .program p {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+.program p {
+    padding: 1.5rem 0 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+/* képernyő igazítás */
+
+@media (min-width: 768px) {
+
+    .prog {
+        display: table;
+        margin: auto;
+        max-width: calc(100vw - 500px);
+    }
+}
+
+/* === Ajándékok === */
+
+.gift {
+    background: url(../képek/wedding-landing-background.png);
+    text-align: center;
+}
+
+  /* betűszín */
+
+.gift h1, .gift p {
+    color: rgba(0, 0, 0, .7);
+}
+
+  /* betű típus */
+
+.gift h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.gift p {
+    font-family: 'Libre Baskerville', serif;
+}
+
+  /* egyéb formázás */
+
+.gift h1 {
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.gift p {
+    padding: 1.5rem 0 2rem;
+    font-size: 1.15rem;
+}
+
+/* === kérdések él válaszok === */
+
+  /* háttér-, betű szín */
+
+.question {
+    background-color: rgba(93, 93, 93);
+    color: #d2ba87;
+    text-align: center;
+}
+
+  /* betű típus */
+
+.question h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.question h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.question h3, .question p {
+    font-family: 'Mulish', sans-serif;
+}
+
+  /* egyéb formázás */
+
+.question h1 {
+    font-size: 3rem;
+    padding: 3rem 0;
+}
+
+
+.kk {
+    padding-bottom: 1.5rem;
+}
+
+
+.question h2 {
+    font-size: 1.5rem;  
+    padding-bottom: 1.7rem;
+}
+
+.question h3 {
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+
+.question h3, .question p {
+    font-size: 1.15rem;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.question p {
+    line-height: 1.7rem;
+    padding: 1rem 0 1.5rem;
+    font-weight: 500;
+}
+
+  /* elválasztó */
+
+.kerdes-vonal {
+    display: inline-block;
+    content: "";
+    background-color: #d2ba87;
+    height: 3px;
+    width: 16rem;
+    vertical-align: middle;
+    margin: 0 .5rem;
+}
+
+  /* képernyő igazítás */
+
+@media (min-width: 768px) {
+
+    .kerdes-keret {
+        display: table;
+    }
+
+    .kk {
+        display: table-cell;
+        padding: 1rem;
+        width: 100vw;
+    }
+
+    .kerdes-vonal {
+        display: inline;
+    }
+
+    .question h2 {
+        text-align: left;
+    }
+
+    .question h3, .question p {
+        margin: 0;
+    }
+
+    .question {
+        padding: 0 3rem;
+    }
+}
+
+
+/* === elérhetőségek === */
+
+.contact {
+    background: url(../képek/wedding-landing-background.png);
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+    padding: 2.5rem 0;
+}
+
+  /* betű típus*/
+
+.contact h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.contact p {
+    font-family: 'Libre Baskerville', serif;
+}
+
+  /* egyéb formázás*/
+
+.contact h1 {
+    font-size: 3rem;
+    padding: 0 0 2.5rem;
+}
+
+.contact p {
+    padding: 0 0 2rem;
+    font-size: 1.15rem;
+}
+
+a {
+    color: #bd806e;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #eda087;
+}
+
+/* === lábjegyzet === */
+
+footer {
+    background-color: #606060;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    font-family: 'Mulish', sans-serif;
+    padding: 1.5rem 0 2rem;
+    font-size: small;
+}
